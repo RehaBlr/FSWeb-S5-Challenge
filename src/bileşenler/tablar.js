@@ -24,7 +24,7 @@ const Tablar = (konu) => {
     tabDiv.textContent = item;
     topicsDiv.appendChild(tabDiv);
 
-    console.log(item);
+    // console.log(item);
   });
   return topicsDiv;
 };
@@ -47,7 +47,7 @@ const tabEkleyici = (secici) => {
     .get(`http://localhost:5001/api/konular`)
     .then(function (res) {
       document.querySelector(secici).appendChild(Tablar(res.data.konular));
-      console.log(res.data);
+      // console.log(res.data);
     })
     .catch(function (err) {
       console.log(err);
